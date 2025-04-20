@@ -1,0 +1,149 @@
+//Bài 1: Viết một hàm để tính tổng của tất cả các số chẵn trong một mảng.
+
+//using System;
+
+//class Program
+//{
+//    static int TongSoChan(int[] arr)
+//    {
+//        int tong = 0;
+//        foreach (int x in arr)
+//        {
+//            if (x % 2 == 0)
+//                tong += x;
+//        }
+//        return tong;
+//    }
+
+//    static void Main()
+//    {
+//        int[] mang = { 1, 2, 3, 4, 5, 6 };
+//        Console.WriteLine("Tổng các số chẵn trong mảng là: " + TongSoChan(mang));
+//    }
+//}
+
+//Bài 3: Viết một hàm để đếm số lượng số âm và số dương trong một mảng gồm n phần tử nhập từ bàn phím.
+
+//using System;
+
+//class Program
+//{
+//    static void DemAmDuong(int[] arr, out int demAm, out int demDuong)
+//    {
+//        demAm = 0;
+//        demDuong = 0;
+
+//        foreach (int x in arr)
+//        {
+//            if (x > 0) demDuong++;
+//            else if (x < 0) demAm++;
+//        }
+//    }
+
+//    static void Main()
+//    {
+//        Console.Write("Nhập số phần tử: ");
+//        int n = int.Parse(Console.ReadLine());
+//        int[] arr = new int[n];
+
+//        for (int i = 0; i < n; i++)
+//        {
+//            Console.Write($"Phần tử {i}: ");
+//            arr[i] = int.Parse(Console.ReadLine());
+//        }
+
+//        DemAmDuong(arr, out int am, out int duong);
+//        Console.WriteLine($"Số dương: {duong}, Số âm: {am}");
+//    }
+//}
+
+//Bài 4: Viết hàm để tìm số lớn thứ hai trong một mảng các số nguyên.
+
+//using System;
+
+//class Program
+//{
+//    static int TimSoLonThuHai(int[] arr)
+//    {
+//        int max1 = int.MinValue, max2 = int.MinValue;
+
+//        foreach (int x in arr)
+//        {
+//            if (x > max1)
+//            {
+//                max2 = max1;
+//                max1 = x;
+//            }
+//            else if (x > max2 && x != max1)
+//            {
+//                max2 = x;
+//            }
+//        }
+
+//        return (max2 == int.MinValue) ? max1 : max2;
+//    }
+
+//    static void Main()
+//    {
+//        int[] mang = { 4, 1, 7, 9, 9, 3, 6 };
+//        int kq = TimSoLonThuHai(mang);
+//        Console.WriteLine("Số lớn thứ hai là: " + kq);
+//    }
+//}
+
+//Bài 5: Viết hàm hoán vị 2 số nguyên a và b nhập từ bàn phím.
+
+//using System;
+
+//class Program
+//{
+//    static void HoanVi(ref int a, ref int b)
+//    {
+//        int temp = a;
+//        a = b;
+//        b = temp;
+//    }
+
+//    static void Main()
+//    {
+//        Console.Write("Nhập a: ");
+//        int a = int.Parse(Console.ReadLine());
+//        Console.Write("Nhập b: ");
+//        int b = int.Parse(Console.ReadLine());
+
+//        Console.WriteLine($"Trước khi hoán vị: a = {a}, b = {b}");
+//        HoanVi(ref a, ref b);
+//        Console.WriteLine($"Sau khi hoán vị: a = {a}, b = {b}");
+//    }
+//}
+
+//Bài 6: Viết hàm sắp xếp mảng số thực n phần tử nhập từ bàn phím theo chiều tăng dần.
+
+//using System;
+
+//class Program
+//{
+//    static void SapXepTangDan(double[] arr)
+//    {
+//        Array.Sort(arr);
+//    }
+
+//    static void Main()
+//    {
+//        Console.Write("Nhập số phần tử: ");
+//        int n = int.Parse(Console.ReadLine());
+//        double[] arr = new double[n];
+
+//        for (int i = 0; i < n; i++)
+//        {
+//            Console.Write($"Phần tử {i}: ");
+//            arr[i] = double.Parse(Console.ReadLine());
+//        }
+
+//        SapXepTangDan(arr);
+
+//        Console.WriteLine("Mảng sau khi sắp xếp tăng dần:");
+//        foreach (double x in arr)
+//            Console.Write(x + " ");
+//    }
+//}
